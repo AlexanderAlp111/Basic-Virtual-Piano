@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .piano {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    user-select: none;
+  }
+  
+  .key {
+    border: 1px solid #000;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.1s;
+  }
+
+  .key.active{
+    transform: translateY(2px);
+  }
+  
+  .key.white {
+    background-color: #fff;
+    height: 150px;
+    width: 40px;
+    z-index: 1;
+  }
+  
+  .key.white:active {
+    background-color: #ddd;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .key.black {
+    position: absolute;
+    top: 0;
+    width: 24px;
+    height: 100px;
+    background-color: #000;
+    z-index: 1;
+}
+    
+  .key.black:active {
+    background-color: #444;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+  
+ /* Correct black key positions */
+ .key.black[data-key="w"] {
+  left: 68px;
+}
+.key.black[data-key="e"] {
+  left: 108px;
+}
+.key.black[data-key="r"] {
+  left: 184px;
+}
+.key.black[data-key="t"] {
+  left: 230px;
+}
+.key.black[data-key="y"] {
+  left: 270px;
+}
+.key.black[data-key="u"] {
+  left: 388px;
+}
+.key.black[data-key="i"] {
+  left: 428px;
+}
+.key.black[data-key="o"] {
+  left: 506px;
+}
+.key.black[data-key="p"] {
+  left: 548px;
+}
+.key.black[data-key="["] {
+  left: 592px;
+}
+
+   .controls {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     align-items: center;
+     gap: 10px;
+     margin-top: 20px;
+   }
+
+  
+  label {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  button {
+    font-size: 16px;
+    padding: 8px 16px;
+    border: 1px solid #000;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  button:active {
+    background-color: #ddd;
+  }
+  
+  input[type="checkbox"] {
+    margin-left: 4px;
+  }  
